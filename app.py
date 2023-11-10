@@ -1,7 +1,7 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask
+from flask import Flask, render_template
 from collections import Counter
 import json
 
@@ -15,5 +15,7 @@ def hello_world():
     result = json.dumps(counter)
     return result
 
-
+@app.get("/count/")
+def count():
+    return render_template('count.html')
 
