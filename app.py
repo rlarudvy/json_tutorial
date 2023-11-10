@@ -17,7 +17,7 @@ def hello_world():
 
 @app.get("/count/")
 def count():
-    return render_template('counter.html')
+    return render_template('count.html')
 
 @app.post("/result/")
 def result():
