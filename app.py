@@ -24,5 +24,6 @@ def result():
     user_input = request.form['userinput']
     word_dict = dict(Counter(user_input.split()))
     result = json.dumps(word_dict)
-    return Response(result,mimetype='application/json',
+    return Response(result,
+                    mimetype='application/json',
                     headers={'Content_Disposition':'attachment; filename=count.json'})
